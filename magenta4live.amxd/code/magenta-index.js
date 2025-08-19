@@ -16,6 +16,7 @@
  */
 
 const { outlet } = require('./src/Comm')
+const { decodeNoteBuffer } = require('./src/Notes')
 const express = require('express')
 const app = express()
 app.use(require('body-parser').json())
@@ -103,6 +104,24 @@ max.addHandler("closing", () => {
 	if (server) {
 		server.close()
 	}
+});
+
+max.addHandler("receive-midi", midiBuf => {
+	console.log(`received midi`);
+	// try {
+    // console.log(`midiBuf: `);
+    // console.log(midiBuf);
+    const duration = 16; // make settable or set a constant
+    const notesArray = decodeNoteBuffer(midiBuf);
+    // console.log(`decoded midiBuf: `);
+    // console.log(notesArray);
+    // TODOs:
+    // toNoteSequence(notesArray, duration);
+    // call predict (create a new generate function in Main.js of Continue)
+	// } catch (e){
+  //   console.log(`error caught: `);
+  //   console.log(e);
+	// }
 });
 
 process.on('exit', () => {

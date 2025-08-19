@@ -22,9 +22,19 @@
 function decodeNote(noteDesc){
 	const [note, pitch, time, duration, velocity=100, muted=0] = noteDesc
 	return {
-		pitch, time, 
-		startTime : time, 
-		endTime : time+duration, 
+		pitch, time,
+		startTime : time,
+		endTime : time+duration,
+		duration, velocity, muted
+	}
+}
+
+function decodeNoteFromBuff(noteDesc){
+	const [pitch, time, duration, velocity=100, muted=0] = noteDesc
+	return {
+		pitch, time,
+		startTime : time,
+		endTime : time+duration,
 		duration, velocity, muted
 	}
 }
@@ -46,6 +56,10 @@ function decode(notesArray){
 	return retNotes
 }
 
+function decodeNoteBuffer(midiBuf){
+	return Object.values(midiBuf).map(decodeNoteFromBuff);
+}
+
 /**
  * Encode a note array into the ableton format
  */
@@ -62,4 +76,4 @@ function encode(notesArray){
 	return ret
 }
 
-module.exports = { encode, decode }
+module.exports = { encode, decode, decodeNoteBuffer }
