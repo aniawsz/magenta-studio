@@ -2,8 +2,8 @@
 	"name" : "magenta4live.amxd",
 	"version" : 1,
 	"creationdate" : 3631616511,
-	"modificationdate" : 3722954219,
-	"viewrect" : [ 1098.0, 153.0, 300.0, 500.0 ],
+	"modificationdate" : 3837984113,
+	"viewrect" : [ 1098.0, 152.0, 300.0, 500.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -13,12 +13,7 @@
 			"main.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
-				"toplevel" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Development/projects/magenta-studio/magenta4live.amxd/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
+				"toplevel" : 1
 			}
 
 		}
@@ -39,12 +34,7 @@
 		"other" : 		{
 			"testing.html" : 			{
 				"kind" : "webpage",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Development/projects/magenta-studio/magenta4live.amxd",
-					"projectrelativepath" : "."
-				}
-
+				"local" : 1
 			}
 
 		}
@@ -57,7 +47,7 @@
 ,
 	"searchpath" : 	{
 		"0" : 		{
-			"bootpath" : "~/Development/projects/magenta-studio/magenta4live.amxd/node_modules",
+			"bootpath" : "~/code-projects/audio-ai/magenta-studio/magenta4live.amxd/node_modules",
 			"projectrelativepath" : "./node_modules",
 			"label" : "",
 			"recursive" : 1,
@@ -66,7 +56,7 @@
 		}
 ,
 		"1" : 		{
-			"bootpath" : "~/Development/projects/magenta-studio/magenta4live.amxd/code/src",
+			"bootpath" : "~/code-projects/audio-ai/magenta-studio/magenta4live.amxd/code/src",
 			"projectrelativepath" : "./code/src",
 			"label" : "",
 			"recursive" : 1,
@@ -75,7 +65,7 @@
 		}
 ,
 		"2" : 		{
-			"bootpath" : "~/Development/projects/magenta-studio/magenta4live.amxd/code/public",
+			"bootpath" : "~/code-projects/audio-ai/magenta-studio/magenta4live.amxd/code/public",
 			"projectrelativepath" : "./code/public",
 			"label" : "",
 			"recursive" : 1,
@@ -91,5 +81,6 @@
 	"devpathtype" : 0,
 	"devpath" : ".",
 	"sortmode" : 0,
-	"viewmode" : 0
+	"viewmode" : 0,
+	"includepackages" : 0
 }
